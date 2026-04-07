@@ -1,0 +1,37 @@
+# Antichea v1.0 - Optimized for Paper 1.21.4
+# ------------------------------------------
+
+# How many times a player can flag before action is taken
+max-flags: 12
+
+# Permissions
+alert-permission: "antichea.alerts"
+prefix: "&8[&cAntichea&8] &7"
+
+# Punishment Settings
+# Options: kick, ban
+punishment: "kick"
+
+# Message sent to the player upon punishment
+# (punishment) will automatically become "kicked" or "banned"
+message: "&cYou've been (punishment) for &4Unusual Gameplay Patterns&c. \n&7If this was a mistake, please contact staff."
+
+# Movement Thresholds (Blocks per tick)
+# 1.21.4 values accounting for sprinting and jumping
+thresholds:
+  # Base walking speed (Standard is ~0.21, but we allow for stairs/slabs)
+  walking: 0.35
+  
+  # Sprinting speed (Standard is ~0.28, buffer added for FOV/ping)
+  sprinting: 0.58
+  
+  # Elytra flight (Standard firework boost is ~1.5, buffer for 40 blocks/sec)
+  elytra: 2.0
+  
+  # Creative/Spectator flying
+  creative-fly: 1.1
+
+# Advanced Logic
+# This determines how much "extra" distance a player can move 
+# before a single flag is officially counted.
+violation-buffer: 1.5
